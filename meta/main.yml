@@ -1,0 +1,33 @@
+---
+
+galaxy_info:
+  role_name: buildah
+  author: Tibor Csoka
+  description: |
+    "Establish buildah."
+  company: ""
+
+  license: MIT
+
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: EL
+      versions:
+        - 7
+
+  galaxy_tags:
+    - buildah
+    - container
+    - builder
+
+dependencies: []

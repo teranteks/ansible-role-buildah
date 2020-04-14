@@ -1,0 +1,28 @@
+---
+
+dist: bionic
+
+language: python
+python:
+  - 3.6
+services: docker
+
+env:
+  global:
+    - ROLE_NAME: buildah
+  matrix:
+    - MOLECULE_DISTRO: ubuntu1804
+
+install:
+  - pip install molecule docker flake8 ansible-lint
+
+before_script:
+  - cd ../
+  - mv ansible-role-$ROLE_NAME $ROLE_NAME
+  - cd $ROLE_NAME
+
+script:
+  - molecule test
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/?branch=master

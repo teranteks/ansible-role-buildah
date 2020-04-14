@@ -1,0 +1,24 @@
+---
+
+# https://github.com/containers/buildah/blob/master/install.md
+
+- name: establish repo
+  include_tasks: "{{ item }}"
+  loop: "{{ query('first_found', params, errors='ignore') }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml"
+        - "{{ ansible_distribution }}.yml"
+        - "{{ ansible_os_family }}.yml"
+        - "{{ ansible_system }}.yml"
+      paths:
+        - '{{ role_path }}/tasks/establish_repo/'
+  tags: install
+
+- name: establish package
+  become: true
+  package:
+    name: buildah
+    state: present
+  tags: install
