@@ -5,16 +5,3 @@
   roles:
     - role: buildah
       vars:
-
-  post_tasks:
-    - name: buildah should be installed
-      block:
-        - name: check buildah version
-          command: '/usr/bin/buildah --version'
-          changed_when: false
-          register: r
-        - name: evaluate executable presence
-          assert:
-            that:
-              - r.rc == 0
-            fail_msg: buildah should be installed

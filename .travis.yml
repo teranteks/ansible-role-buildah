@@ -14,7 +14,7 @@ env:
     - MOLECULE_DISTRO: ubuntu1804
 
 install:
-  - pip install molecule docker flake8 ansible-lint
+  - pip install molecule docker flake8 ansible-lint testinfra
 
 before_script:
   - cd ../

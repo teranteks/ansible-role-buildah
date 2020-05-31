@@ -25,3 +25,7 @@ provisioner:
     prepare: ${MOLECULE_PREPARE:-prepare.yml}
 verifier:
   name: testinfra
+  options:
+    v: 1    # show which tests were executed
+  env:
+    PYTHONWARNINGS: "ignore:.*U.*mode is deprecated:DeprecationWarning"   # ignore verbose warnings
