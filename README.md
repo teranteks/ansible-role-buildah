@@ -1,7 +1,7 @@
 Ansible role: buildah
 =========
 
-[![Build Status](https://travis-ci.com/Provizanta/ansible-role-buildah.svg?branch=master)](https://travis-ci.com/Provizanta/ansible-role-buildah)
+![Build & Deploy](https://github.com/Provizanta/ansible-role-buildah/workflows/molecule/badge.svg?branch=master)
 
 Install and setup buildah.
 

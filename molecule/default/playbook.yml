@@ -3,5 +3,5 @@
 - name: Converge
   hosts: all
   roles:
-    - role: buildah
+    - role: ansible-role-buildah
       vars:
