@@ -2,6 +2,7 @@
 
 galaxy_info:
   role_name: buildah
+  namespace: provizanta
   author: Tibor Csoka
   description: |
     "Establish buildah."
